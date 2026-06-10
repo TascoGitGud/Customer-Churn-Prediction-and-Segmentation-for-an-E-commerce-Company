@@ -1,1 +1,1 @@
-# E-commerce-Customer-Churn-Segmentation
+# Customer-Churn-Segmentation
