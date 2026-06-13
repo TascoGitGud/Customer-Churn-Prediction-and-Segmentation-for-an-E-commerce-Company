@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
 <p align="center">
-  <img src="Churn_Prediction/banner.png" width="100%">
+  <img src="Churn_Prediction/Banner.png" width="100%">
 </p>
 
 # 📊 Customer Churn Prediction & Segmentation for an E-commerce Company | Python
