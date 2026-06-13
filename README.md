@@ -23,8 +23,10 @@ _Predict which customers are likely to leave — and group them into segments so
 ## 📑 Table of Contents
 1. [📌 Background & Overview](#-background--overview)
 2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)
-3. [⚒️ Main Process](#️-main-process)
-4. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
+3. [🗂️ Project Structure](#️-project-structure)
+4. [⚒️ Main Process](#️-main-process)
+5. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
+6. [🚀 How to Run This Project](#-how-to-run-this-project)
 
 ---
 
@@ -49,7 +51,7 @@ An e-commerce company wants to reduce the number of customers who stop using the
 ## 📂 Dataset Description & Data Structure
 
 ### 📌 Data Source
-- 📁 Dataset: `churn_prediction.xlsx`
+- 📁 Dataset: `churn_prediction` 
 - 📄 Format: `.xlsx`
 
 ### 📊 Data Structure
@@ -76,6 +78,19 @@ One main table containing customer behavior and account information.
 | MaritalStatus | TEXT | Marital status |
 | NumberOfAddress | INT | Number of saved addresses |
 | Complain | INT | 1 = filed a complaint in the last month |
+
+---
+
+## 🗂️ Project Structure
+
+```
+Customer-Churn-Segmentation-Using-Machine-Learning/
+│
+└── Churn_Prediction/
+    ├── Banner.png                          
+    ├── Customer_Churn_Prediction.ipynb     # Main notebook (EDA + ML + Clustering)
+    └── churn_prediction.xlsx               # Raw dataset
+```
 
 ---
 
@@ -232,3 +247,30 @@ Highest tenure (longest time with the company), but lowest cashback and lowest o
 ✔️ 💸 Increase cashback rates or send discount vouchers for their next purchase — they are currently getting the least value back.
 ✔️ 🏆 Create a **loyalty program** specifically for long-tenure customers so they feel recognized for their commitment.
 ✔️ 🎯 Send personalized product recommendations to encourage more orders, since their order count is the lowest.
+
+---
+
+## 🚀 How to Run This Project
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/TascoGitGud/Customer-Churn-Segmentation-Using-Machine-Learning.git
+```
+
+**2. Go into the project folder**
+```bash
+cd Customer-Churn-Segmentation-Using-Machine-Learning/Churn_Prediction
+```
+
+**3. Install the required libraries**
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn openpyxl
+```
+
+**4. Open the notebook**
+```bash
+jupyter notebook Customer_Churn_Prediction.ipynb
+```
+
+---
+
