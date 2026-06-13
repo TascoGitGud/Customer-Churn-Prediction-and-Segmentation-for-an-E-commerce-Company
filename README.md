@@ -9,7 +9,7 @@
 
 # 📊 Customer Churn Prediction & Segmentation for an E-commerce Company | Python
 
-_Predict which customers are likely to leave — and group them into segments so the company can run the right promotions for each group._
+_Predict which customers are likely to leave - and group them into segments so the company can run the right promotions for each group._
 
 - 🎯 **Business Question:** Who will churn next, and what kind of customer are they?
 - 🏬 **Domain:** E-commerce
@@ -27,15 +27,15 @@ _Predict which customers are likely to leave — and group them into segments so
 
 An e-commerce company wants to reduce the number of customers who stop using their platform (churned users). To do this, they need to:
 
-✔️ Understand **how churned customers behave** — so the team knows what warning signs to look for.
+✔️ Understand **how churned customers behave** - so the team knows what warning signs to look for.
 ✔️ Build a **machine learning model** to predict which customers are likely to churn.
-✔️ **Segment churned customers** into smaller groups — so the marketing team can design targeted promotions for each group instead of a one-size-fits-all campaign.
+✔️ **Segment churned customers** into smaller groups - so the marketing team can design targeted promotions for each group instead of a one-size-fits-all campaign.
 
 ### 👤 Who is this project for?
 
-✔️ Marketing and CRM teams — to design better retention programs.
-✔️ Data analysts — to understand churn behavior patterns.
-✔️ Business decision-makers — to prioritize which customer groups to act on first.
+✔️ Marketing and CRM teams - to design better retention programs.
+✔️ Data analysts - to understand churn behavior patterns.
+✔️ Business decision-makers - to prioritize which customer groups to act on first.
 
 ---
 
@@ -97,7 +97,7 @@ Customer-Churn-Segmentation-Using-Machine-Learning/
 
 ## ⚒️ Main Process
 
-### 🔍 Part A — EDA (Exploratory Data Analysis)
+### 🔍 Part A - EDA (Exploratory Data Analysis)
 
 #### 🧹 Step 1: Data Cleaning
 
@@ -112,10 +112,10 @@ Before doing any analysis, the data needs to be clean and complete.
 Looking at each column on its own to understand the overall data shape.
 
 Key findings:
-- ⚠️ The dataset is **imbalanced** — customers who stayed (Churn = 0) are about 5 times more than those who churned (Churn = 1).
-- 🕐 Customers tend to churn **early in their time with the platform** — Tenure distribution is right-skewed, meaning new customers leave more often.
+- ⚠️ The dataset is **imbalanced** - customers who stayed (Churn = 0) are about 5 times more than those who churned (Churn = 1).
+- 🕐 Customers tend to churn **early in their time with the platform** - Tenure distribution is right-skewed, meaning new customers leave more often.
 
-#### 🔗 Step 3: Bivariate Analysis — Churn Behavior by Group
+#### 🔗 Step 3: Bivariate Analysis - Churn Behavior by Group
 
 This step compares churned vs. non-churned customers across different dimensions to find which groups are most at risk.
 
@@ -124,8 +124,8 @@ This step compares churned vs. non-churned customers across different dimensions
 - 😡 **Complain:** Customers who filed complaints churned at a much higher rate than those who didn't. This is the clearest behavioral signal for churn.
 - ⏳ **Tenure:** Churned customers tend to have shorter time with the company. Customers in their first few months are the most likely to leave.
 - 🏙️ **CityTier:** Customers in Tier 1 and Tier 3 cities churn more than Tier 2. This may be due to differences in delivery quality or service coverage.
-- 📱 **PreferedOrderCat:** Customers who often buy **Mobile Phones** and **Laptops & Accessories** show higher churn — these are high-value categories where a bad experience likely has a bigger impact.
-- 💍 **MaritalStatus:** Single customers churn more than married or divorced ones — possibly because they have less long-term commitment to a platform.
+- 📱 **PreferedOrderCat:** Customers who often buy **Mobile Phones** and **Laptops & Accessories** show higher churn - these are high-value categories where a bad experience likely has a bigger impact.
+- 💍 **MaritalStatus:** Single customers churn more than married or divorced ones - possibly because they have less long-term commitment to a platform.
 - 👨 **Gender:** Male customers show slightly higher churn in both count and rate.
 
 #### 📐 Step 4: Outlier Treatment
@@ -138,30 +138,30 @@ Before building the full model, a basic Random Forest was trained to see which f
 
 ---
 
-### 🤖 Part B — Supervised Learning (Churn Prediction)
+### 🤖 Part B - Supervised Learning (Churn Prediction)
 
 The goal here is to build a model that can predict whether a customer will churn or not.
 
 #### ✂️ Step 1: Train-Test Split
 
-The dataset was split into 80% for training and 20% for testing. `stratify=y` was used to make sure the churn ratio is the same in both sets — important because the data is imbalanced.
+The dataset was split into 80% for training and 20% for testing. `stratify=y` was used to make sure the churn ratio is the same in both sets - important because the data is imbalanced.
 
 #### 🌲 Step 2: Train Random Forest Model
 
 A **Random Forest Classifier** was chosen because it handles mixed data types well, is not easily affected by noise, and provides feature importance scores.
 
 Settings used:
-- `n_estimators=200` — 200 decision trees
-- `max_depth=12` — limits tree depth to avoid overfitting
-- `class_weight='balanced'` — tells the model to pay more attention to the minority class (churned customers), since there are far fewer of them
+- `n_estimators=200` - 200 decision trees
+- `max_depth=12` - limits tree depth to avoid overfitting
+- `class_weight='balanced'` - tells the model to pay more attention to the minority class (churned customers), since there are far fewer of them
 
 #### 📊 Step 3: Model Evaluation
 
 The model was evaluated using three metrics:
 
-- 📋 **Classification Report** — shows precision, recall, and F1-score for both churn and non-churn groups.
-- 📉 **ROC-AUC Score** — measures how well the model separates churned from non-churned. Closer to 1.0 is better.
-- 🟩 **Confusion Matrix** — shows how many churned customers the model correctly caught vs. missed.
+- 📋 **Classification Report** - shows precision, recall, and F1-score for both churn and non-churn groups.
+- 📉 **ROC-AUC Score** - measures how well the model separates churned from non-churned. Closer to 1.0 is better.
+- 🟩 **Confusion Matrix** - shows how many churned customers the model correctly caught vs. missed.
 
 #### ⚙️ Step 4: Hyperparameter Tuning
 
@@ -178,7 +178,7 @@ The best settings found were then applied to produce the final tuned model.
 
 ---
 
-### 🔵 Part C — Unsupervised Learning (Customer Segmentation)
+### 🔵 Part C - Unsupervised Learning (Customer Segmentation)
 
 Once we know who churned, the next question is: **are all churned customers the same?** If not, the company can offer different promotions to different groups.
 
@@ -186,16 +186,16 @@ Only churned customers (Churn = 1) were used in this part.
 
 #### 🔢 Step 1: Find the Right Number of Clusters
 
-Using all numeric columns at once did not produce clear clusters — the Elbow Method showed no obvious "bend" and Silhouette Scores were too low.
+Using all numeric columns at once did not produce clear clusters - the Elbow Method showed no obvious "bend" and Silhouette Scores were too low.
 
 The solution was to test **4 different feature sets** and compare results:
 
 | Feature Set | Description | Result |
 |---|---|---|
-| Set1 — Behavioral & Value | Tenure, Cashback, SatisfactionScore, Complain, OrderCount, DaySinceLastOrder, HourSpendOnApp | ✅ Best — clear peak at K=6, acceptable at K=3 |
-| Set2 — Logistics & Service | WarehouseToHome, Complain, SatisfactionScore, CouponUsed, DaySinceLastOrder | ⚠️ OK but weaker than Set1 |
-| Set3 — All Numeric | All numeric columns combined | ❌ Silhouette too low (0.07–0.11) |
-| Set4 — Behavioral (no Satisfaction) | Same as Set1 but without SatisfactionScore | ❌ Score keeps rising with K — no clear peak |
+| Set1 - Behavioral & Value | Tenure, Cashback, SatisfactionScore, Complain, OrderCount, DaySinceLastOrder, HourSpendOnApp | ✅ Best - clear peak at K=6, acceptable at K=3 |
+| Set2 - Logistics & Service | WarehouseToHome, Complain, SatisfactionScore, CouponUsed, DaySinceLastOrder | ⚠️ OK but weaker than Set1 |
+| Set3 - All Numeric | All numeric columns combined | ❌ Silhouette too low (0.07–0.11) |
+| Set4 - Behavioral (no Satisfaction) | Same as Set1 but without SatisfactionScore | ❌ Score keeps rising with K - no clear peak |
 
 ➡️ **Final choice: Set1 with K = 3**
 
@@ -205,7 +205,7 @@ K=3 was chosen over K=6 because it gives 3 distinct, meaningful groups that are 
 
 KMeans was run with K=3 on Set1 features (after StandardScaler normalization). Each churned customer was assigned to one of three clusters.
 
-#### 🧩 Step 3: Cluster Profiling — Who is in Each Group?
+#### 🧩 Step 3: Cluster Profiling - Who is in Each Group?
 
 | Metric | Cluster 0 | Cluster 1 | Cluster 2 |
 |---|---|---|---|
@@ -214,16 +214,16 @@ KMeans was run with K=3 on Set1 features (after StandardScaler normalization). E
 | CashbackAmount (avg) | 163.8 (highest) | Medium | 131.5 (lowest) |
 | Complain rate | ~98% | 0% | ~55% |
 | SatisfactionScore | Medium | 3.79 (highest) | Medium |
-| DaySinceLastOrder | Medium | 3.03 (highest — long gap) | Medium |
+| DaySinceLastOrder | Medium | 3.03 (highest - long gap) | Medium |
 | OrderCount | Medium | Medium | 1.06 (lowest) |
 
-🔴 **Cluster 0 — "Long-term, high-value customers with complaints"**
-These customers stayed the longest and got the most cashback — but nearly all of them filed a complaint. They also live farthest from the warehouse. They are leaving because of **service and delivery problems**, not because they don't like the platform.
+🔴 **Cluster 0 - "Long-term, high-value customers with complaints"**
+These customers stayed the longest and got the most cashback - but nearly all of them filed a complaint. They also live farthest from the warehouse. They are leaving because of **service and delivery problems**, not because they don't like the platform.
 
-🟡 **Cluster 1 — "Happy but quietly drifting away"**
-No complaints, highest satisfaction — but the longest gap since their last order. They are not angry, they are just **becoming less active** over time and eventually stopping.
+🟡 **Cluster 1 - "Happy but quietly drifting away"**
+No complaints, highest satisfaction - but the longest gap since their last order. They are not angry, they are just **becoming less active** over time and eventually stopping.
 
-🟢 **Cluster 2 — "Loyal but under-rewarded"**
+🟢 **Cluster 2 - "Loyal but under-rewarded"**
 Highest tenure (longest time with the company), but lowest cashback and lowest order count. They have been around the longest but seem to feel they are **not getting enough value back** for their loyalty.
 
 ---
@@ -232,20 +232,20 @@ Highest tenure (longest time with the company), but lowest cashback and lowest o
 
 📍 Key Takeaways:
 
-🔴 **For Cluster 0 — "Long-term, high-value customers with complaints"**
+🔴 **For Cluster 0 - "Long-term, high-value customers with complaints"**
 
-✔️ Reach out personally to resolve their complaints — these are high-value customers and losing them hurts the most.
+✔️ Reach out personally to resolve their complaints - these are high-value customers and losing them hurts the most.
 ✔️ 🚚 Offer free shipping or faster delivery to reduce the impact of long warehouse distances.
 ✔️ 💰 Send a special cashback voucher as a "thank you for staying with us" to bring them back.
 
-🟡 **For Cluster 1 — "Happy but quietly drifting away"**
+🟡 **For Cluster 1 - "Happy but quietly drifting away"**
 
-✔️ Don't apologize — there's nothing wrong with their experience. Instead, **re-engage** them with time-limited flash sales or new product alerts. ⚡
-✔️ 📋 Send a short survey to understand why they stopped buying — it may be a change in needs, not dissatisfaction.
+✔️ Don't apologize - there's nothing wrong with their experience. Instead, **re-engage** them with time-limited flash sales or new product alerts. ⚡
+✔️ 📋 Send a short survey to understand why they stopped buying - it may be a change in needs, not dissatisfaction.
 
-🟢 **For Cluster 2 — "Loyal but under-rewarded"**
+🟢 **For Cluster 2 - "Loyal but under-rewarded"**
 
-✔️ 💸 Increase cashback rates or send discount vouchers for their next purchase — they are currently getting the least value back.
+✔️ 💸 Increase cashback rates or send discount vouchers for their next purchase - they are currently getting the least value back.
 ✔️ 🏆 Create a **loyalty program** specifically for long-tenure customers so they feel recognized for their commitment.
 ✔️ 🎯 Send personalized product recommendations to encourage more orders, since their order count is the lowest.
 
