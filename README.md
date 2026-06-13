@@ -21,16 +21,6 @@ _Predict which customers are likely to leave — and group them into segments so
 
 ---
 
-## 📑 Table of Contents
-1. [📌 Background & Overview](#-background--overview)
-2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)
-3. [🗂️ Project Structure](#️-project-structure)
-4. [⚒️ Main Process](#️-main-process)
-5. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
-6. [🚀 How to Run This Project](#-how-to-run-this-project)
-
----
-
 ## 📌 Background & Overview
 
 ### 🎯 Objective
@@ -46,6 +36,16 @@ An e-commerce company wants to reduce the number of customers who stop using the
 ✔️ Marketing and CRM teams — to design better retention programs.
 ✔️ Data analysts — to understand churn behavior patterns.
 ✔️ Business decision-makers — to prioritize which customer groups to act on first.
+
+---
+
+## 📑 Table of Contents
+1. [📌 Background & Overview](#-background--overview)
+2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)
+3. [🗂️ Project Structure](#️-project-structure)
+4. [⚒️ Main Process](#️-main-process)
+5. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
+6. [🚀 How to Run This Project](#-how-to-run-this-project)
 
 ---
 
