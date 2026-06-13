@@ -3,6 +3,10 @@
 ![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
+<p align="center">
+  <img src="Churn_Prediction/banner.jpg" width="100%">
+</p>
+
 # 📊 Customer Churn Prediction & Segmentation for an E-commerce Company | Python
 
 _Predict which customers are likely to leave — and group them into segments so the company can run the right promotions for each group._
@@ -12,6 +16,7 @@ _Predict which customers are likely to leave — and group them into segments so
 - **Tools:** Python (pandas, scikit-learn, seaborn, matplotlib)
 
 Author: Bạch Minh Nam
+
 Date: 2026-05-01
 
 ---
