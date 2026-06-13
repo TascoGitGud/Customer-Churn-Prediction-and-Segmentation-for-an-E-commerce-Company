@@ -16,6 +16,7 @@ _Predict which customers are likely to leave — and group them into segments so
 - 🛠️ **Tools:** Python (pandas, scikit-learn, seaborn, matplotlib)
 
 👤 Author: Bạch Minh Nam
+
 📅 Date: 2026-05-01
 
 ---
