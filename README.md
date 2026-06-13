@@ -1,170 +1,230 @@
-# UNIGAP - PORTFOLIO BUILDING MODULE - SQL/ PYTHON PROJECT
+![Python](https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Tool-Jupyter_Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
-🔥Use this template as an outline for your SQL/ Python Github projects - which is task by task type of projects. 
-Make a copy of this readme file and tailor it your own. Happy portfolio-ing and start applying aggressively :"))
+# 📊 Customer Churn Prediction & Segmentation for an E-commerce Company | Python
 
-Updated: Nov'25
+_Predict which customers are likely to leave — and group them into segments so the company can run the right promotions for each group._
 
----
-![KPMG Transaction Analysis](https://github.com/Dorothy-Ho-Vy/Sample_SQL_Python_template/blob/4dee6ff56077b90b1aea82e8517136f7185a77a3/Blue%20White%20Modern%20Payment%20Gateway%20Service%20Twitter%20Post.png.crdownload)
+- **Business Question:** Who will churn next, and what kind of customer are they?
+- **Domain:** E-commerce 
+- **Tools:** Python (pandas, scikit-learn, seaborn, matplotlib)
 
-👉🏻Change Icon emoji 🔥🔍📘🚩 to your likings by clicking "Start" + "."
-
-# 📊 Your Project Name [ Business question + Domain + Tools ]  
-
- _Example:_
- _Analyze Customer segmentation of Sprocket Central - a medium size bikes accessories organization | Python_
- 
-_+ Business question: The core problem that this project solves ->  Customer segmentation_
-
-_+ Domain: Domain/ Industry that this projects focus on --> a medium size bikes accessories organization tức công ty sản xuất và thương mại_
-
-**_📌You need to show that your projects are applicable to real business use cases, for a particular industry, not just "learning projects"_**
-  
-Author: [Your Name]  
-Date: YYYY-MM-DD  
-Tools Used: SQL/ Python  
+Author: Bạch Minh Nam
+Date: 2026-05-01
 
 ---
 
-## 📑 Table of Contents  
-1. [📌 Background & Overview](#-background--overview)  
+## 📑 Table of Contents
+1. [📌 Background & Overview](#-background--overview)
 2. [📂 Dataset Description & Data Structure](#-dataset-description--data-structure)
+3. [⚒️ Main Process](#️-main-process)
 4. [🔎 Final Conclusion & Recommendations](#-final-conclusion--recommendations)
 
 ---
 
-## 📌 Background & Overview  
+## 📌 Background & Overview
 
-### Objective:
-### 📖 What is this project about? What Business Question will it solve?
+### Objective
 
-Clearly outline what this project does, what business questions the project will solve. 
+An e-commerce company wants to reduce the number of customers who stop using their platform (churned users). To do this, they need to:
 
-- Provide a brief introduction - Write in bullet point format
-- Point out the main business question
+✔️ Understand **how churned customers behave** — so the team knows what warning signs to look for.
+✔️ Build a **machine learning model** to predict which customers are likely to churn.
+✔️ **Segment churned customers** into smaller groups — so the marketing team can design targeted promotions for each group instead of a one-size-fits-all campaign.
 
+### Who is this project for?
 
- _Example:_
-  This project uses Python to analyze transaction data from KPMG to:
-
-✔️ Identify the behavior in customer's first transaction.  
-✔️ Provide actionable insights to increase retention rate   
- 
-
-
-### 👤 Who is this project for?  
-
-Mention who might benefit from this project 
-
- _Example:_
-
-✔️ Data analysts & business analysts  
-✔️ Decision-makers & stakeholders  
-
-
+✔️ Marketing and CRM teams — to design better retention programs.
+✔️ Data analysts — to understand churn behavior patterns.
+✔️ Business decision-makers — to prioritize which customer groups to act on first.
 
 ---
 
-## 📂 Dataset Description & Data Structure  
+## 📂 Dataset Description & Data Structure
 
-### 📌 Data Source  
-- Source: (Mention where the dataset is obtained from—Kaggle, company database, government sources, etc.)  
-- Size: (Mention the number of rows & columns)  
-- Format: (.csv, .sql, .xlsx, etc.)  
+### 📌 Data Source
+- Source: Company-provided dataset (`churn_prediction.xlsx`)
+- Format: `.xlsx`
 
-### 📊 Data Structure & Relationships  
+### 📊 Data Structure
 
-#### 1️⃣ Tables Used:  
-Mention how many tables are in the dataset.  Only mention tables that you actually used from the entire dataset. 
+#### 1️⃣ Tables Used
+One main table containing customer behavior and account information.
 
-#### 2️⃣ Table Schema & Data Snapshot  
+#### 2️⃣ Table Schema
 
-Table 1: Products Table  
-
-👉🏻 Insert a screenshot of table schema 
-
-**_📌If the table is too big, only capture a part of it that contains key metrics you used in the projects or put the table in toggle_**
-
- _Example:_
-
-| Column Name | Data Type | Description |  
-|-------------|----------|-------------|  
-| Product_ID  | INT      | Unique identifier for each product |  
-| Name        | TEXT     | Product name |  
-| Category    | TEXT     | Product category |  
-| Price       | FLOAT    | Price per unit |  
-
-
-Table 2: Sales Transactions  
-
-👉🏻 Insert a screenshot of table schema.
-
+| Column Name | Data Type | Description |
+|---|---|---|
+| CustomerID | INT | Unique ID for each customer |
+| Churn | INT | 1 = churned, 0 = stayed |
+| Tenure | FLOAT | How long the customer has been with the company |
+| PreferredLoginDevice | TEXT | Device the customer usually logs in with |
+| CityTier | INT | City tier (1, 2, or 3) |
+| WarehouseToHome | FLOAT | Distance from warehouse to customer's home |
+| PreferPayment | TEXT | Preferred payment method |
+| Gender | TEXT | Customer gender |
+| HourSpendOnApp | FLOAT | Hours spent on the app or website |
+| NumberOfDeviceRegistered | INT | Number of devices registered |
+| PreferedOrderCat | TEXT | Preferred product category in the last month |
+| SatisfactionScore | INT | Customer satisfaction score |
+| MaritalStatus | TEXT | Marital status |
+| NumberOfAddress | INT | Number of saved addresses |
+| Complain | INT | 1 = filed a complaint in the last month |
 
 ---
 
 ## ⚒️ Main Process
 
-1️⃣ Data Cleaning & Preprocessing  
-2️⃣ Exploratory Data Analysis (EDA)  
-3️⃣ SQL/ Python Analysis 
+### Part A — EDA (Exploratory Data Analysis)
 
-👉🏻 First, explain codes' purpose - what they do in 1, 2 short sentences.
+#### Step 1: Data Cleaning
 
-*_Example_*
+Before doing any analysis, the data needs to be clean and complete.
 
-## Task 1: Analyze bounce rate...
+- **Missing values:** Filled with the median for numeric columns, and the mode (most common value) for text columns.
+- **Duplicate rows:** Removed completely.
+- **Outliers:** Detected using the IQR method and removed for columns like `Tenure`, `WarehouseToHome`, `HourSpendOnApp`, `OrderCount`, and others. This step prevents extreme values from distorting the model.
 
-Bounce rate represents the percentage of website sessions where users visit only one page and leave without interacting further with the site. A high bounce rate can indicate that visitors are not [....]
+#### Step 2: Univariate Analysis
 
-**_📌You need to show your understanding/ thinking process when you do this analysis. In the above exp, I explain the meaning of Bounce Rate in Marketing performance analysis - which demonstrates my understanding about the metric & its role in my projects/ flow of analysis"_**
-**_📌If the task is just simple as "Remove duplication, Replace null value.."--> Summarize all steps related to Transforming & Cleaning data steps in a group & explain shortly at once the reason why you need that transformation_**
+Looking at each column on its own to understand the overall data shape.
 
-👉🏻 Then how your query/ code & Insert screenshots of your result
+Key findings:
+- The dataset is **imbalanced** — customers who stayed (Churn = 0) are about 5 times more than those who churned (Churn = 1).
+- Customers tend to churn **early in their time with the platform** — Tenure distribution is right-skewed, meaning new customers leave more often.
 
- **_If your result is a very long table with many records, only show top 5/10 and bottom 5/10 rows, or records that relevant to the insights/ observation below_**
+#### Step 3: Bivariate Analysis — Churn Behavior by Group
 
-*_Example_*
+This step compares churned vs. non-churned customers across different dimensions to find which groups are most at risk.
 
-### Project Results:
+**Key observations:**
 
-| Period   | Name                | Count Items | Count Orders | Sales        |
-|:---------|:--------------------|------------:|-------------:|-------------:|
-| Apr 2014 | Bib-Shorts          |           4 |            1 |       233.97 |
-| Feb 2014 | Bib-Shorts          |           4 |            2 |       233.97 |
-| Jul 2013 | Bib-Shorts          |           2 |            1 |       116.99 |
-| Jun 2013 | Bib-Shorts          |           2 |            1 |       116.99 |
-| Apr 2014 | Bike Racks          |          45 |           45 |     5,400.00 |
-| Aug 2013 | Bike Racks          |         222 |           63 |    17,387.18 |
-| Dec 2013 | Bike Racks          |         162 |           48 |    12,582.29 |
-| Feb 2014 | Bike Racks          |          27 |           27 |     3,240.00 |
-| Jan 2014 | Bike Racks          |         161 |           53 |    12,840.00 |
-| Jul 2013 | Bike Racks          |         422 |           75 |    29,802.30 |
-| ...      | ...                 |         ... |          ... |          ... |
-| May 2014 | Vests               |         610 |          103 |    23,640.71 |
-| Nov 2013 | Vests               |         315 |           75 |    12,937.24 |
-| Oct 2013 | Vests               |         611 |           93 |    23,255.74 |
-| Sep 2013 | Vests               |         623 |          102 |    24,100.47 |
-| Jul 2013 | Wheels              |           4 |            1 |       698.63 |
-| Jun 2013 | Wheels              |           3 |            1 |       450.91 |
-| Sep 2013 | Wheels              |           1 |            1 |        83.30 |
+- **Complain:** Customers who filed complaints churned at a much higher rate than those who didn't. This is the clearest behavioral signal for churn.
+- **Tenure:** Churned customers tend to have shorter time with the company. Customers in their first few months are the most likely to leave.
+- **CityTier:** Customers in Tier 1 and Tier 3 cities churn more than Tier 2. This may be due to differences in delivery quality or service coverage.
+- **PreferedOrderCat:** Customers who often buy **Mobile Phones** and **Laptops & Accessories** show higher churn — these are high-value categories where a bad experience likely has a bigger impact.
+- **MaritalStatus:** Single customers churn more than married or divorced ones — possibly because they have less long-term commitment to a platform.
+- **Gender:** Male customers show slightly higher churn in both count and rate.
 
-*A summary of the full results. The complete dataset is available in the repository.*
+#### Step 4: Outlier Treatment
 
-👉🏻 Finally, explain your observations/ findings from the results 
-  
- _Describe trends, key metrics, and patterns._  
+Outliers were removed using the IQR (Interquartile Range) method on 8 numeric columns. Keeping outliers would skew both the EDA findings and the machine learning model's performance.
+
+#### Step 5: Feature Importance with Random Forest (Base Model)
+
+Before building the full model, a basic Random Forest was trained to see which features matter most for predicting churn. This helps confirm that the analysis in Step 3 is on the right track.
 
 ---
 
-## 🔎 Final Conclusion & Recommendations  
+### Part B — Supervised Learning (Churn Prediction)
 
-👉🏻 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following:  
+The goal here is to build a model that can predict whether a customer will churn or not.
 
-📍 Key Takeaways:  
-✔️ Recommendation 1  
-✔️ Recommendation 2  
-✔️ Recommendation 3
+#### Step 1: Train-Test Split
 
-**_📌Remember to summarize the most core insights/ observations you extract from the entire projects. 
- Recap ONLY key actions/ recommendations. DO NOT copy paste everything above_**
+The dataset was split into 80% for training and 20% for testing. `stratify=y` was used to make sure the churn ratio is the same in both sets — important because the data is imbalanced.
+
+#### Step 2: Train Random Forest Model
+
+A **Random Forest Classifier** was chosen because it handles mixed data types well, is not easily affected by noise, and provides feature importance scores.
+
+Settings used:
+- `n_estimators=200` — 200 decision trees
+- `max_depth=12` — limits tree depth to avoid overfitting
+- `class_weight='balanced'` — tells the model to pay more attention to the minority class (churned customers), since there are far fewer of them
+
+#### Step 3: Model Evaluation
+
+The model was evaluated using three metrics:
+
+- **Classification Report** — shows precision, recall, and F1-score for both churn and non-churn groups.
+- **ROC-AUC Score** — measures how well the model separates churned from non-churned. Closer to 1.0 is better.
+- **Confusion Matrix** — shows how many churned customers the model correctly caught vs. missed.
+
+#### Step 4: Hyperparameter Tuning
+
+To improve the model, **GridSearchCV** was used to test different combinations of settings:
+
+| Parameter | Values Tested |
+|---|---|
+| n_estimators | 50, 100, 200 |
+| max_depth | None, 10, 20 |
+| min_samples_split | 2, 5 |
+| bootstrap | True, False |
+
+The best settings found were then applied to produce the final tuned model.
+
+---
+
+### Part C — Unsupervised Learning (Customer Segmentation)
+
+Once we know who churned, the next question is: **are all churned customers the same?** If not, the company can offer different promotions to different groups.
+
+Only churned customers (Churn = 1) were used in this part.
+
+#### Step 1: Find the Right Number of Clusters
+
+Using all numeric columns at once did not produce clear clusters — the Elbow Method showed no obvious "bend" and Silhouette Scores were too low.
+
+The solution was to test **4 different feature sets** and compare results:
+
+| Feature Set | Description | Result |
+|---|---|---|
+| Set1 — Behavioral & Value | Tenure, Cashback, SatisfactionScore, Complain, OrderCount, DaySinceLastOrder, HourSpendOnApp | ✅ Best — clear peak at K=6, acceptable at K=3 |
+| Set2 — Logistics & Service | WarehouseToHome, Complain, SatisfactionScore, CouponUsed, DaySinceLastOrder | OK but weaker than Set1 |
+| Set3 — All Numeric | All numeric columns combined | ❌ Silhouette too low (0.07–0.11) |
+| Set4 — Behavioral (no Satisfaction) | Same as Set1 but without SatisfactionScore | Score keeps rising with K — no clear peak |
+
+**Final choice: Set1 with K = 3**
+
+K=3 was chosen over K=6 because it gives 3 distinct, meaningful groups that are practical for the marketing team to act on.
+
+#### Step 2: Run Final Clustering & Label Each Group
+
+KMeans was run with K=3 on Set1 features (after StandardScaler normalization). Each churned customer was assigned to one of three clusters.
+
+#### Step 3: Cluster Profiling — Who is in Each Group?
+
+| Metric | Cluster 0 | Cluster 1 | Cluster 2 |
+|---|---|---|---|
+| Count | 247 customers | 220 customers | 281 customers |
+| Tenure (avg) | 3.51 | Medium | 3.99 (highest) |
+| CashbackAmount (avg) | 163.8 (highest) | Medium | 131.5 (lowest) |
+| Complain rate | ~98% | 0% | ~55% |
+| SatisfactionScore | Medium | 3.79 (highest) | Medium |
+| DaySinceLastOrder | Medium | 3.03 (highest — long gap) | Medium |
+| OrderCount | Medium | Medium | 1.06 (lowest) |
+
+**Cluster 0 — "Long-term, high-value customers with complaints"**
+These customers stayed the longest and got the most cashback — but nearly all of them filed a complaint. They also live farthest from the warehouse. They are leaving because of **service and delivery problems**, not because they don't like the platform.
+
+**Cluster 1 — "Happy but quietly drifting away"**
+No complaints, highest satisfaction — but the longest gap since their last order. They are not angry, they are just **becoming less active** over time and eventually stopping.
+
+**Cluster 2 — "Loyal but under-rewarded"**
+Highest tenure (longest time with the company), but lowest cashback and lowest order count. They have been around the longest but seem to feel they are **not getting enough value back** for their loyalty.
+
+---
+
+## 🔎 Final Conclusion & Recommendations
+
+📍 Key Takeaways:
+
+**For Cluster 0 — "Long-term, high-value customers with complaints"**
+
+✔️ Reach out personally to resolve their complaints — these are high-value customers and losing them hurts the most.
+✔️ Offer free shipping or faster delivery to reduce the impact of long warehouse distances.
+✔️ Send a special cashback voucher as a "thank you for staying with us" to bring them back.
+
+**For Cluster 1 — "Happy but quietly drifting away"**
+
+✔️ Don't apologize — there's nothing wrong with their experience. Instead, **re-engage** them with time-limited flash sales or new product alerts.
+✔️ Send a short survey to understand why they stopped buying — it may be a change in needs, not dissatisfaction.
+
+**For Cluster 2 — "Loyal but under-rewarded"**
+
+✔️ Increase cashback rates or send discount vouchers for their next purchase — they are currently getting the least value back.
+✔️ Create a **loyalty program** specifically for long-tenure customers so they feel recognized for their commitment.
+✔️ Send personalized product recommendations to encourage more orders, since their order count is the lowest.
