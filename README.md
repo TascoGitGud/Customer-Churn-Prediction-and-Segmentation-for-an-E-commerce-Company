@@ -50,7 +50,7 @@ An e-commerce company wants to reduce the number of customers who stop using the
 ## 📂 Dataset Description & Data Structure
 
 ### 📌 Data Source
-- Source: Company-provided dataset (`churn_prediction.xlsx`)
+- Dataset: (`churn_prediction.xlsx`)
 - Format: `.xlsx`
 
 ### 📊 Data Structure
