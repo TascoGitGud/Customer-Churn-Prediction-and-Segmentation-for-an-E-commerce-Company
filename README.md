@@ -255,7 +255,7 @@ Highest tenure (longest time with the company), but lowest cashback and lowest o
 
 **1. Clone the repository**
 ```bash
-[git clone https://github.com/TascoGitGud/Customer-Churn-Segmentation-Using-Machine-Learning.git](https://github.com/TascoGitGud/Customer-Churn-Prediction-and-Segmentation-for-an-E-commerce-Company.git)
+https://github.com/TascoGitGud/Customer-Churn-Prediction-and-Segmentation-for-an-E-commerce-Company.git
 ```
 
 **2. Install the required libraries**
