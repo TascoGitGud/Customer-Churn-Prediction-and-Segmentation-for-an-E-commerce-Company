@@ -255,20 +255,15 @@ Highest tenure (longest time with the company), but lowest cashback and lowest o
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/TascoGitGud/Customer-Churn-Segmentation-Using-Machine-Learning.git
+[git clone https://github.com/TascoGitGud/Customer-Churn-Segmentation-Using-Machine-Learning.git](https://github.com/TascoGitGud/Customer-Churn-Prediction-and-Segmentation-for-an-E-commerce-Company.git)
 ```
 
-**2. Go into the project folder**
-```bash
-cd Customer-Churn-Segmentation-Using-Machine-Learning/Churn_Prediction
-```
-
-**3. Install the required libraries**
+**2. Install the required libraries**
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn openpyxl
 ```
 
-**4. Open the notebook**
+**3. Open the notebook**
 ```bash
 jupyter notebook Customer_Churn_Prediction.ipynb
 ```
