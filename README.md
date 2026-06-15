@@ -85,9 +85,7 @@ One main table containing customer behavior and account information.
 ## 🗂️ Project Structure
 
 ```
-Customer-Churn-Segmentation-Using-Machine-Learning/
-│
-└── Churn_Prediction/
+Churn_Prediction/
     ├── Banner.png                          
     ├── Customer_Churn_Prediction.ipynb     # Main notebook (EDA + ML + Clustering)
     └── churn_prediction.xlsx               # Raw dataset
