@@ -26,13 +26,17 @@ _Predict which customers are likely to leave - and group them into segments so t
 An e-commerce company wants to reduce the number of customers who stop using their platform (churned users). To do this, they need to:
 
 ✔️ Understand **how churned customers behave** - so the team knows what warning signs to look for.
+
 ✔️ Build a **machine learning model** to predict which customers are likely to churn.
+
 ✔️ **Segment churned customers** into smaller groups - so the marketing team can design targeted promotions for each group instead of a one-size-fits-all campaign.
 
 ### 👤 Who is this project for?
 
 ✔️ Marketing and CRM teams - to design better retention programs.
+
 ✔️ Data analysts - to understand churn behavior patterns.
+
 ✔️ Business decision-makers - to prioritize which customer groups to act on first.
 
 ---
@@ -231,18 +235,23 @@ Highest tenure (longest time with the company), but lowest cashback and lowest o
 🔴 **For Cluster 0 - "Long-term, high-value customers with complaints"**
 
 ✔️ Reach out personally to resolve their complaints - these are high-value customers and losing them hurts the most.
+
 ✔️ 🚚 Offer free shipping or faster delivery to reduce the impact of long warehouse distances.
+
 ✔️ 💰 Send a special cashback voucher as a "thank you for staying with us" to bring them back.
 
 🟡 **For Cluster 1 - "Happy but quietly drifting away"**
 
 ✔️ Don't apologize - there's nothing wrong with their experience. Instead, **re-engage** them with time-limited flash sales or new product alerts. ⚡
+
 ✔️ 📋 Send a short survey to understand why they stopped buying - it may be a change in needs, not dissatisfaction.
 
 🟢 **For Cluster 2 - "Loyal but under-rewarded"**
 
 ✔️ 💸 Increase cashback rates or send discount vouchers for their next purchase - they are currently getting the least value back.
+
 ✔️ 🏆 Create a **loyalty program** specifically for long-tenure customers so they feel recognized for their commitment.
+
 ✔️ 🎯 Send personalized product recommendations to encourage more orders, since their order count is the lowest.
 
 ---
