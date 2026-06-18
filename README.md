@@ -17,8 +17,6 @@ _Predict which customers are likely to leave - and group them into segments so t
 
 👤 Author: Bạch Minh Nam
 
-📅 Date: 2026-05-01
-
 ---
 
 ## 📌 Background & Overview
