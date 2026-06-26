@@ -7,7 +7,7 @@
   <img src="Churn_Prediction/Banner.png" width="100%">
 </p>
 
-# 📊 Customer Churn Prediction & Segmentation for an E-commerce Company | Python / Machine Learning
+# 🔮 Customer Churn Prediction & Segmentation for an E-commerce Company | Python / Machine Learning
 
 _Predict which customers are likely to leave - and group them into segments so the company can run the right promotions for each group._
 
