@@ -1,13 +1,15 @@
+# 🔮 Python / Machine Learning | Customer Churn Prediction & Segmentation for an E-commerce Company
+
 ![Python](https://img.shields.io/badge/Language-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Tool-Jupyter_Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
+---
+
 <p align="center">
   <img src="Churn_Prediction/Banner.png" width="100%">
 </p>
-
-# 🔮 Customer Churn Prediction & Segmentation for an E-commerce Company | Python / Machine Learning
 
 _Predict which customers are likely to leave - and group them into segments so the company can run the right promotions for each group._
 
