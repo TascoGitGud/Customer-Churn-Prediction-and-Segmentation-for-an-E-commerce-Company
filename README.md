@@ -5,8 +5,6 @@
 ![Scikit-Learn](https://img.shields.io/badge/Library-Scikit--Learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
----
-
 <p align="center">
   <img src="Churn_Prediction/Banner.png" width="100%">
 </p>
